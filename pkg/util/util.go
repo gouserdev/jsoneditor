@@ -31,6 +31,13 @@ func Open(url string) error {
 	return exec.Command(cmd, args...).Start()
 }
 
+func CheckJsonFile(filePath string) {
+	if _, err := os.Stat(filePath); err == nil {
+	} else {
+		value_byte := strutil.ToBytes(`{"password":"init"}`)
+		ioutil.WriteFile(filePath, value_byte, os.ModePerm)
+	}
+}
 func GetFromJson(gpath string, filePath string) string {
 	if gpath == "" {
 		content, err := ioutil.ReadFile(filePath)
