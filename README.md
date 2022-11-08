@@ -29,7 +29,7 @@ make start
 make build
 ```
 
-## import jsoneditor into your project and then copy configs/config.json into your code
+## use jsoneditor as module
 
 ```sh
 go get -u "github.com/gouserdev/jsoneditor"
