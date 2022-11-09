@@ -49,3 +49,5 @@ func main() {
 ## thanks 
 
 https://github.com/rakyll/statik
+
+https://github.com/tangram-js/json-editor
